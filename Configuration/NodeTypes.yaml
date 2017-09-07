@@ -1,0 +1,15 @@
+'Sandstorm.UploadToSpecificResourceCollection:AssetList':
+  superTypes:
+    'Neos.NodeTypes:AssetList': TRUE
+  ui:
+    label: Protected Asset List
+    icon: 'icon-files-o'
+    position: 700
+  properties:
+    assets:
+      type: array<Neos\Media\Domain\Model\Asset>
+      ui:
+        inspector:
+          editor: Sandstorm.UploadToSpecificResourceCollection/SpecificAssetEditor
+          group: 'resources'
+        reloadIfChanged: TRUE

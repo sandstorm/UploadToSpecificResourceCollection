@@ -1,0 +1,28 @@
+Neos:
+  Neos:
+    userInterface:
+      requireJsPathMapping:
+        'Sandstorm.UploadToSpecificResourceCollection': 'resource://Sandstorm.UploadToSpecificResourceCollection/Public/JavaScript/Editors'
+
+    fusion:
+      autoInclude:
+        'Sandstorm.UploadToSpecificResourceCollection': TRUE
+
+
+  Flow:
+    resource:
+      # Definition of resource storages provided by the Flow core.
+      # Storages are used for storing and retrieving resources.
+      storages:
+
+        protectedPersistentResourcesStorage:
+          storage: 'Neos\Flow\ResourceManagement\Storage\WritableFileSystemStorage'
+          storageOptions:
+            path: '%FLOW_PATH_DATA%Persistent/ProtectedResources/'
+
+      collections:
+
+        # Collection which contains all persistent resources
+        protectedPersistent:
+          storage: 'protectedPersistentResourcesStorage'
+          target: 'localWebDirectoryPersistentResourcesTarget'

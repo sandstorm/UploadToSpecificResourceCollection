@@ -1,0 +1,2 @@
+prototype(Sandstorm.UploadToSpecificResourceCollection:AssetList) >
+prototype(Sandstorm.UploadToSpecificResourceCollection:AssetList) < prototype(Neos.NodeTypes:AssetList)
