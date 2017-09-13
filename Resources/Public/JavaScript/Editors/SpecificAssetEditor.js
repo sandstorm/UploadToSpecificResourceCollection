@@ -6,8 +6,8 @@ define(
 		'text!./SpecificAssetEditor.html'
 	],
 	function(Ember, $, AssetEditor, template) {
-
 		return AssetEditor.extend({
+			fileChooserLabel: 'Not Used but needed',
 			template: Ember.Handlebars.compile(template),
 			_initializeUploader: function() {
 				this._super();
